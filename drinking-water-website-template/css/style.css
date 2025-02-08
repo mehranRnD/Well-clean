@@ -860,8 +860,7 @@
 
 /*** Footer Start ***/
 .footer {
-    background: var(--bs-dark);
-}
+    background: #f5f5f5;}
 
 .footer .footer-item a {
     line-height: 35px;

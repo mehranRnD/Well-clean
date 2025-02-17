@@ -1,4 +1,6 @@
-
+body {
+    color: rgb(23, 23, 23) !important;
+}
 /*** Spinner Start ***/
 /*** Spinner ***/
 #spinner {
@@ -596,7 +598,7 @@
 .counter {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(rgba(25, 64, 154, 0.9), rgba(25, 64, 154, 1)), url(../img/fact-bg.jpg);
+    background: linear-gradient(rgba(194, 197, 203, 0.9), rgb(146, 152, 158)), url(../img/fact-bg.jpg);
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -898,4 +900,96 @@
 }
 /*** copyright end ***/
 
+/* payment section */
+.bg-payment {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
 
+.payment-methods {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+  }
+  .payment-methods h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  .payment-methods p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #323232;
+  }
+  .qr-codes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .qr-code {
+    flex: 1 1 calc(50% - 1rem);
+    text-align: center;
+  }
+  @media (min-width: 768px) {
+    .qr-code {
+      flex: 1 1 calc(20% - 1rem);
+    }
+  }
+  .qr-codes img {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+  }
+  .qr-code span {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #333;
+  }
+/* payment section ended */
+
+.text-muted {
+    color: black !important;
+}
+
+.bg-about {
+    background-image: url(https://media.istockphoto.com/id/2040540318/photo/young-asian-cleaning-woman-uses-a-towel-to-clean-a-computer-using-cleaning-solution-in-her.jpg?s=612x612&w=0&k=20&c=QaWGofJxo7ThigfRjeAJ6GreHGg9YVbHVduhnn5yaVU=);
+    background-repeat: no-repeat;
+    width: 100%;
+    z-index: 0;
+    background-size: cover;
+}
+
+.bg-why-us {
+    background-image: url(https://media.istockphoto.com/id/1294313698/photo/man-disinfecting-an-office-desk.jpg?s=612x612&w=0&k=20&c=NH_F9Jg0Ob6zI5ZElCpap0E8F8E2zaoDv0Ln16dRYok=);
+    background-repeat: no-repeat;
+    width: 100%;
+    z-index: 0;
+    background-size: cover;
+}
+
+.bg-testimonial {
+    background-image: url(https://media.istockphoto.com/id/1161199997/photo/water-drops-on-white-surface-background.jpg?s=612x612&w=0&k=20&c=9ayHbBiteQancrockiTb9SQxg-j-uoPHNBdHKlZ7xR4=);
+    background-repeat: no-repeat;
+    width: 100%;
+    z-index: 0;
+    background-size: cover;
+}
+
+.bg-footer {
+    background-image: url(https://media.istockphoto.com/id/1383076996/photo/professional-cleaning-equipment-on-blue-background-overview-cleaning-tools-concept.jpg?s=612x612&w=0&k=20&c=j3xTZPiY2hBipLwKnJ8LfH13tnKMlNi55sNKhH8CnN8=);
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position: top;
+    z-index: 0;
+    background-size: cover;
+}

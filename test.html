@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Availability</title>
+    <style>
+      .avail-body {
+        font-family: "Segoe UI", sans-serif;
+        background: #f9f9f9;
+        padding: 40px 20px;
+        margin: 0;
+        text-align: center;
+      }
+
+      .avail-heading {
+        font-size: 2.2rem;
+        color: #2c3e50;
+        margin-bottom: 30px;
+        animation: availFadeInDown 1s ease forwards;
+      }
+
+      .avail-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        opacity: 0;
+        transform: translateY(30px);
+        animation: availFadeUp 1s ease forwards;
+        animation-delay: 0.5s;
+        padding: 0 10px;
+      }
+
+      .avail-card {
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        padding: 20px;
+        flex: 1 1 100%;
+        width: 100%;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        animation: availFadeCard 0.6s ease forwards;
+        opacity: 0;
+      }
+
+      .avail-card:hover {
+        transform: translateY(-8px) scale(1.03);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      }
+
+      .avail-day {
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: #2c3e50;
+        margin-bottom: 8px;
+      }
+
+      .avail-time {
+        font-size: 1.05rem;
+        color: #555;
+      }
+
+      .avail-card.today {
+        background-color: #e3fcec;
+        border-left: 6px solid #2ecc71;
+        box-shadow: 0 8px 20px rgba(46, 204, 113, 0.2);
+      }
+
+      @keyframes availSlideLeft {
+        from {
+          opacity: 0;
+          transform: translateX(-40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes availSlideRight {
+        from {
+          opacity: 0;
+          transform: translateX(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      .avail-card.slide-left {
+        animation: availSlideLeft 0.6s ease forwards;
+      }
+
+      .avail-card.slide-right {
+        animation: availSlideRight 0.6s ease forwards;
+      }
+
+      @keyframes availFadeUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes availFadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes availFadeCard {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* ✅ Mobile: Full width cards with some spacing */
+      @media (max-width: 600px) {
+        .avail-container {
+          padding: 0 10px;
+        }
+
+        .avail-card {
+          width: 100%;
+          max-width: 100%;
+          flex: 1 1 100%;
+        }
+      }
+
+      /* ✅ Tablets: 2 cards per row */
+      @media (min-width: 601px) and (max-width: 1024px) {
+        .avail-card {
+          flex: 1 1 calc(50% - 20px);
+          max-width: calc(50% - 20px);
+        }
+      }
+
+      /* ✅ Desktop: 3-4 cards per row */
+      @media (min-width: 1025px) {
+        .avail-card {
+          flex: 1 1 calc(25% - 20px);
+          max-width: calc(25% - 20px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="avail-body">
+      <h2 class="avail-heading">Availability</h2>
+      <div class="avail-container" id="availability-cards"></div>
+    </div>
+
+    <script>
+      fetch(
+        "https://docs.google.com/spreadsheets/d/18QGjfvf4rdojxpL9qNimpnD4kshkzvnj3giu52d3Ttc/gviz/tq?tqx=out:json"
+      )
+        .then((res) => res.text())
+        .then((text) => {
+          const json = JSON.parse(text.substr(47).slice(0, -2));
+          const container = document.getElementById("availability-cards");
+
+          const today = new Date().toLocaleString("en-US", { weekday: "long" });
+
+          json.table.rows.forEach((row, index) => {
+            const day = row.c[0]?.v;
+            const time = row.c[1]?.v;
+
+            if (!day || day.toLowerCase() === "day") return;
+
+            const card = document.createElement("div");
+            card.className = "avail-card";
+
+            if (day.trim().toLowerCase() === today.toLowerCase()) {
+              card.classList.add("today");
+            }
+
+            card.classList.add(index % 2 === 0 ? "slide-left" : "slide-right");
+            card.style.animationDelay = `${0.2 + index * 0.2}s`;
+
+            card.innerHTML = `
+          <div class="avail-day">${day}</div>
+          <div class="avail-time">${time}</div>
+        `;
+            container.appendChild(card);
+          });
+        })
+        .catch((err) => console.error("Error loading availability:", err));
+    </script>
+  </body>
+</html>

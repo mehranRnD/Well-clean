@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Well Clean - Pricing</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="img/favicon-32x32.png" />
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+    <style>
+      .navbar-light .navbar-nav .nav-link {
+        color: #393838;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Spinner Start -->
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div
+        class="spinner-border text-primary"
+        style="width: 3rem; height: 3rem"
+        role="status"
+      >
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+    <!-- Spinner End -->
+    <!-- Social Media Sticky Buttons -->
+    <div class="social-icons">
+      <a
+        href="https://wa.me/447398538498"
+        class="social-btn whatsapp"
+        target="_blank"
+      >
+        <i class="fab fa-whatsapp"></i>
+      </a>
+
+      <a
+        href="https://www.facebook.com/well-clean"
+        class="social-btn facebook"
+        target="_blank"
+      >
+        <i class="fab fa-facebook-f"></i>
+      </a>
+
+      <a
+        href="https://www.instagram.com/well-clean"
+        class="social-btn instagram"
+        target="_blank"
+      >
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+    <!-- Navbar & Hero Start -->
+    <div class="container-fluid position-relative p-0">
+      <nav
+        class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0"
+      >
+        <a href="index.html" class="navbar-brand p-0">
+          <!-- <h1 class="text-primary"><i class="fas fa-hand-holding-water me-3"></i>Well Clean</h1> -->
+          <img src="img/testing-logo-2.png" alt="Logo" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+        >
+          <span class="fa fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav ms-auto py-0">
+            <a href="index.html" class="nav-item nav-link">Home</a>
+            <a href="about.html" class="nav-item nav-link">About</a>
+            <a href="service.html" class="nav-item nav-link">Services</a>
+            <a href="pricing.html" class="nav-item nav-link active">Pricing</a>
+            <a href="contact.html" class="nav-item nav-link">Contact</a>
+          </div>
+          <div class="d-none d-xl-flex me-3">
+            <div class="d-flex flex-column pe-3 border-end border-primary">
+              <a href="tel:+447398538498"
+                ><span class="text-primary">Free: +44 7398 538498</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Header Start -->
+      <!-- <div class="container-fluid bg-breadcrumb">
+        <div class="container text-center py-5" style="max-width: 900px">
+          <h4
+            class="text-white display-4 mb-4 wow fadeInDown"
+            data-wow-delay="0.1s"
+          >
+            Our Services
+          </h4>
+        </div>
+      </div> -->
+      <!-- Header End -->
+    </div>
+    <!-- Navbar & Hero End -->
+
+    <!-- Add this JavaScript -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // No additional JavaScript needed
+      });
+    </script>
+
+    <!-- Services Section -->
+    <div class="container-fluid cleaning-services-section py-5">
+      <div class="container">
+        <div class="container-fluid booking-section py-5">
+          <div class="container">
+            <div class="row justify-content-center my-5">
+              <div class="col-12 text-center">
+                <h2 class="text-uppercase my-4">Online Booking</h2>
+                <div class="d-flex justify-content-center gap-4 mb-4">
+                  <button class="btn btn-primary px-4 py-2" id="oneOffBtn">
+                    <i class="fas fa-broom me-2"></i>One-Off Cleans
+                  </button>
+                  <button class="btn btn-secondary px-4 py-2" id="regularBtn">
+                    <i class="fas fa-calendar-alt me-2"></i>Regular Cleaning
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="row justify-content-center">
+              <div class="col-lg-7">
+                <div
+                  id="oneOffSection"
+                  class="booking-section p-4 mb-4"
+                  style="display: block"
+                >
+                  <div class="card shadow-sm">
+                    <div class="card-body">
+                      <h3 class="card-title mb-4">One-Off Cleaning</h3>
+                      <form id="oneOffForm">
+                        <div class="mb-4">
+                          <label for="oneOffRoomSize" class="form-label"
+                            >Size of House *</label
+                          >
+                          <select
+                            class="form-select"
+                            id="oneOffRoomSize"
+                            required
+                          >
+                            <option value="">Select size</option>
+                            <option value="1-2">1-2 Rooms</option>
+                            <option value="3-4">3-4 Rooms</option>
+                            <option value="5+">5+ Rooms</option>
+                          </select>
+                        </div>
+                        <div class="mb-4">
+                          <label for="oneOffDate" class="form-label"
+                            >Preferred Date *</label
+                          >
+                          <input
+                            type="date"
+                            class="form-control"
+                            id="oneOffDate"
+                            required
+                          />
+                        </div>
+                        <div class="mb-4">
+                          <label for="oneOffTime" class="form-label"
+                            >Preferred Time *</label
+                          >
+                          <input
+                            type="time"
+                            class="form-control"
+                            id="oneOffTime"
+                            required
+                          />
+                        </div>
+                        <div class="mb-4">
+                          <label for="oneOffNotes" class="form-label"
+                            >Special Instructions *</label
+                          >
+                          <textarea
+                            class="form-control"
+                            id="oneOffNotes"
+                            rows="3"
+                            required
+                          ></textarea>
+                        </div>
+                        <div class="text-end">
+                          <button
+                            type="submit"
+                            class="btn btn-primary px-4 py-2"
+                          >
+                            <i class="fas fa-calendar-check me-2"></i>Book Now
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Regular Cleaning Section -->
+                <div
+                  id="regularSection"
+                  class="booking-section p-4"
+                  style="display: none"
+                >
+                  <div class="card shadow-sm">
+                    <div class="card-body">
+                      <h3 class="card-title mb-4">Regular Cleaning</h3>
+                      <form id="regularForm">
+                        <div class="mb-4">
+                          <label for="regularRoomSize" class="form-label"
+                            >Size of House *</label
+                          >
+                          <select
+                            class="form-select"
+                            id="regularRoomSize"
+                            required
+                          >
+                            <option value="">Select size</option>
+                            <option value="1-2">1-2 Rooms</option>
+                            <option value="3-4">3-4 Rooms</option>
+                            <option value="5+">5+ Rooms</option>
+                          </select>
+                        </div>
+                        <div class="mb-4">
+                          <label for="regularFrequency" class="form-label"
+                            >Cleaning Frequency *</label
+                          >
+                          <select
+                            class="form-select"
+                            id="regularFrequency"
+                            required
+                          >
+                            <option value="">Select frequency</option>
+                            <option value="weekly">Weekly/Bi-Weekly</option>
+                            <option value="monthly">Monthly</option>
+                          </select>
+                        </div>
+                        <div class="mb-4">
+                          <label for="regularDate" class="form-label"
+                            >Start Date *</label
+                          >
+                          <input
+                            type="date"
+                            class="form-control"
+                            id="regularDate"
+                            required
+                          />
+                        </div>
+                        <div class="mb-4">
+                          <label for="regularNotes" class="form-label"
+                            >Special Instructions *</label
+                          >
+                          <textarea
+                            class="form-control"
+                            id="regularNotes"
+                            rows="3"
+                            required
+                          ></textarea>
+                        </div>
+                        <div class="text-end">
+                          <button
+                            type="submit"
+                            class="btn btn-primary px-4 py-2"
+                          >
+                            <i class="fas fa-calendar-check me-2"></i>Book Now
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Side: Pricing Calculator -->
+              <div class="col-lg-5 col-xl-4">
+                <div class="card shadow-sm h-auto">
+                  <div class="card-body">
+                    <h4 class="card-title mb-3">Pricing</h4>
+                    <div class="pricing-calculator">
+                      <div class="price-display mb-3">
+                        <h5 class="mb-1">Estimated Price</h5>
+                        <h2 class="text-primary mb-0" id="totalPrice">£0.00</h2>
+                      </div>
+
+                      <div class="price-breakdown">
+                        <div class="mb-2">
+                          <h6 class="mb-1">Service Type</h6>
+                          <p id="serviceType">Select a service type</p>
+                        </div>
+                        <div class="mb-2">
+                          <h6 class="mb-1">House Size</h6>
+                          <p id="houseSize">Select house size</p>
+                        </div>
+                        <div
+                          class="mb-2"
+                          id="frequencySection"
+                          style="display: none"
+                        >
+                          <h6 class="mb-1">Cleaning Frequency</h6>
+                          <p id="cleaningFrequency">Select frequency</p>
+                        </div>
+                        <div class="mb-2">
+                          <h6 class="mb-1">Price Range</h6>
+                          <p id="priceRange">
+                            Select options to see price range
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="price-details mt-3">
+                        <h6 class="mb-2">Price Details</h6>
+                        <div class="price-item mb-1">
+                          <span>Base Price</span>
+                          <span id="basePrice">£0.00</span>
+                        </div>
+                        <div
+                          class="price-item mb-1"
+                          id="hourlyRateSection"
+                          style="display: none"
+                        >
+                          <span>Hourly Rate</span>
+                          <span id="hourlyRate">£0.00</span>
+                        </div>
+                        <div
+                          class="price-item mb-1"
+                          id="monthlyRateSection"
+                          style="display: none"
+                        >
+                          <span>Monthly Rate</span>
+                          <span id="monthlyRate">£0.00</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add this CSS to your existing styles -->
+    <style>
+      .cleaning-services-section {
+        background-color: #f8f9fa;
+        padding: 80px 0;
+      }
+
+      .cleaning-service-tabs {
+        gap: 1rem;
+      }
+
+      .cleaning-service-tab {
+        background: white;
+        border: 2px solid #f1f1f1;
+        padding: 1rem 2rem;
+        border-radius: 50px;
+        color: #333;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+
+      .cleaning-service-tab:hover,
+      .cleaning-service-tab.active {
+        background: #fff;
+        border-color: #e1e1e1;
+        color: #000;
+        transform: translateY(-3px);
+      }
+
+      .cleaning-service-tab i {
+        font-size: 1.1rem;
+      }
+
+      .cleaning-service-card {
+        background: white;
+        border: 2px solid #f1f1f1;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+      }
+
+      .cleaning-service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .cleaning-service-card h3 {
+        color: #000;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+      }
+
+      .cleaning-service-card p {
+        color: #666;
+        line-height: 1.6;
+        font-size: 0.95rem;
+      }
+
+      .cleaning-service-features {
+        margin: 0;
+        padding: 0;
+      }
+
+      .cleaning-service-features li {
+        margin-bottom: 0.5rem;
+        color: #666;
+        font-size: 0.9rem;
+      }
+
+      .cleaning-service-features i {
+        font-size: 0.8rem;
+      }
+
+      .cleaning-service-card .btn {
+        padding: 0.8rem 1.5rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        margin-top: 1.5rem;
+      }
+
+      .cleaning-service-card .btn:hover {
+        transform: translateX(10px);
+      }
+
+      .cleaning-service-card .btn i {
+        transition: transform 0.3s ease;
+        font-size: 0.9rem;
+      }
+
+      .cleaning-service-card .btn:hover i {
+        transform: translateX(5px);
+      }
+
+      @media (max-width: 768px) {
+        .cleaning-service-tabs {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        .cleaning-service-tab {
+          padding: 0.8rem 1.5rem;
+          font-size: 0.9rem;
+        }
+
+        .cleaning-service-card {
+          padding: 2rem;
+        }
+
+        .cleaning-service-card h3 {
+          font-size: 1.2rem;
+        }
+      }
+
+      /* Remove content switch animation */
+      .cleaning-service-content {
+        display: none;
+      }
+
+      .cleaning-service-content.active {
+        display: block;
+      }
+    </style>
+
+    <!-- Add this JavaScript to handle the service toggling -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const oneOffBtn = document.getElementById("oneOffBtn");
+        const regularBtn = document.getElementById("regularBtn");
+        const oneOffSection = document.getElementById("oneOffSection");
+        const regularSection = document.getElementById("regularSection");
+
+        // Button click handlers
+        oneOffBtn.addEventListener("click", function () {
+          oneOffSection.style.display = "block";
+          regularSection.style.display = "none";
+          oneOffBtn.classList.add("btn-primary");
+          oneOffBtn.classList.remove("btn-secondary");
+          regularBtn.classList.add("btn-secondary");
+          regularBtn.classList.remove("btn-primary");
+        });
+
+        regularBtn.addEventListener("click", function () {
+          oneOffSection.style.display = "none";
+          regularSection.style.display = "block";
+          regularBtn.classList.add("btn-primary");
+          regularBtn.classList.remove("btn-secondary");
+          oneOffBtn.classList.add("btn-secondary");
+          oneOffBtn.classList.remove("btn-primary");
+        });
+
+        // Initialize with first button active
+        oneOffBtn.click();
+      });
+    </script>
+
+    <!-- Enquiry Modal -->
+    <div
+      class="modal fade"
+      id="estimateModal"
+      tabindex="-1"
+      aria-labelledby="estimateModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="estimateModalLabel">
+              Cleaning Service Enquiry
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="cleaningEnquiryForm">
+              <!-- Personal Information -->
+              <div class="mb-4">
+                <h6 class="text-primary">Personal Information</h6>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="name" class="form-label">Full Name *</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="name"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="email" class="form-label"
+                      >Email Address *</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Contact Information -->
+              <div class="mb-4">
+                <h6 class="text-primary">Contact Information</h6>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="phone" class="form-label">Phone Number *</label>
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="phone"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="address" class="form-label">Address *</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="address"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Cleaning Details -->
+              <div class="mb-4">
+                <h6 class="text-primary">Cleaning Details</h6>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="cleaningType" class="form-label"
+                      >Type of Cleaning *</label
+                    >
+                    <select class="form-select" id="cleaningType" required>
+                      <option value="">Select Cleaning Type</option>
+                      <option value="domestic">Domestic Cleaning</option>
+                      <option value="commercial">Commercial Cleaning</option>
+                      <option value="healthcare">Healthcare Cleaning</option>
+                      <option value="education">Education Facilities</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="rooms" class="form-label"
+                      >Number of Rooms *</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="rooms"
+                      min="1"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Schedule -->
+              <div class="mb-4">
+                <h6 class="text-primary">Schedule</h6>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="date" class="form-label"
+                      >Preferred Date *</label
+                    >
+                    <input
+                      type="date"
+                      class="form-control"
+                      id="date"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="time" class="form-label"
+                      >Preferred Time *</label
+                    >
+                    <input
+                      type="time"
+                      class="form-control"
+                      id="time"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div class="mb-4">
+                <label for="notes" class="form-label">Additional Notes</label>
+                <textarea class="form-control" id="notes" rows="3"></textarea>
+              </div>
+
+              <div class="text-end">
+                <button type="submit" class="btn btn-primary">
+                  Submit Enquiry
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Booking Details Modal -->
+    <div
+      class="modal fade"
+      id="bookingDetailsModal"
+      tabindex="-1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-md">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Booking Details</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="bookingDetailsForm">
+              <div class="row">
+                <div class="col-md-6 mb-2">
+                  <label for="name" class="form-label">Full Name *</label>
+                  <input type="text" class="form-control" id="name" required />
+                </div>
+                <div class="col-md-6 mb-2">
+                  <label for="email" class="form-label">Email Address *</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-2">
+                  <label for="phone" class="form-label">Phone Number *</label>
+                  <input type="tel" class="form-control" id="phone" required />
+                </div>
+                <div class="col-md-6 mb-2">
+                  <label for="alternatePhone" class="form-label"
+                    >Alternate Phone *</label
+                  >
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="alternatePhone"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="mb-2">
+                <label for="address" class="form-label">Address *</label>
+                <textarea
+                  class="form-control"
+                  id="address"
+                  rows="2"
+                  required
+                ></textarea>
+              </div>
+              <div class="row">
+                <div class="col-md-4 mb-2">
+                  <label for="postcode" class="form-label">Postcode *</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="postcode"
+                    required
+                  />
+                </div>
+                <div class="col-md-4 mb-2">
+                  <label for="city" class="form-label">City *</label>
+                  <input type="text" class="form-control" id="city" required />
+                </div>
+                <div class="col-md-4 mb-2">
+                  <label for="county" class="form-label">County *</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="county"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="mb-2">
+                <label for="additionalNotes" class="form-label"
+                  >Additional Notes *</label
+                >
+                <textarea
+                  class="form-control"
+                  id="additionalNotes"
+                  rows="2"
+                  required
+                ></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button type="button" class="btn btn-primary" id="confirmBooking">
+              Confirm Booking
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Terms and Conditions Modal -->
+    <div class="modal fade" id="termsModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Terms and Conditions</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="terms-content">
+              <h6>1. Booking Policy</h6>
+              <p>All bookings must be confirmed 48 hours in advance.</p>
+
+              <h6>2. Payment Terms</h6>
+              <p>
+                Payment is required at the time of booking. We accept
+                credit/debit cards and bank transfer.
+              </p>
+
+              <h6>3. Cancellation Policy</h6>
+              <p>
+                Cancellations must be made at least 24 hours before the
+                scheduled cleaning time.
+              </p>
+
+              <h6>4. Service Guarantee</h6>
+              <p>
+                We guarantee to provide professional and thorough cleaning
+                services.
+              </p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Start -->
+    <div
+      class="container-fluid footer bg-footer py-5 wow fadeIn"
+      data-wow-delay="0.2s"
+    >
+      <div class="container py-5">
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-6 col-xl-4">
+            <div class="footer-item d-flex flex-column">
+              <div class="footer-item">
+                <h3 class="mb-4">
+                  <img
+                    src="img/testing-logo-2.png"
+                    alt="Well-Clean"
+                    style="height: 70px"
+                  />
+                </h3>
+                <p class="mb-3">
+                  Well Clean is dedicated to providing top-notch cleaning
+                  services for both residential and commercial spaces using
+                  eco-friendly products and advanced cleaning techniques.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-xl-3">
+            <div class="footer-item d-flex flex-column">
+              <h4 class="mb-4">About Us</h4>
+              <a href="about.html"
+                ><i class="fas fa-angle-right me-2"></i> About</a
+              >
+              <a href="service.html"
+                ><i class="fas fa-angle-right me-2"></i> Services</a
+              >
+              <a href="about.html"
+                ><i class="fas fa-angle-right me-2"></i> Why Choose Us</a
+              >
+              <a href="contact.html"
+                ><i class="fas fa-angle-right me-2"></i> Contact us</a
+              >
+              <a href="index.html#faq-section"
+                ><i class="fas fa-angle-right me-2"></i> FAQs</a
+              >
+              <a href="terms-conditions.html"
+                ><i class="fas fa-angle-right me-2"></i> Terms & Conditions</a
+              >
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-xl-3">
+            <div class="footer-item d-flex flex-column">
+              <h4 class="mb-4">Business Hours</h4>
+              <div class="mb-3">
+                <h6 class="text-muted mb-0">Mon - Friday:</h6>
+                <p class="mb-0">09.00 am to 07.00 pm</p>
+              </div>
+              <div class="mb-3">
+                <h6 class="text-muted mb-0">Saturday:</h6>
+                <p class="mb-0">10.00 am to 05.00 pm</p>
+              </div>
+              <div class="mb-3">
+                <h6 class="text-muted mb-0">Sunday:</h6>
+                10:00am to 5:00pm
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-6 col-xl-2">
+            <div class="footer-item d-flex flex-column">
+              <h4 class="mb-4">Contact Info</h4>
+              <!-- <a 
+                ><i class="fa fa-map-marker-alt me-2"></i> 123 Street, New York,
+                USA</a
+              > -->
+              <a href="mailto:info@wellclean.com"
+                ><i class="fas fa-envelope me-2"></i> info@wellclean.com</a
+              >
+
+              <a href="tel:+447398538498"
+                ><i class="fas fa-phone me-2"></i> +44 7398 538498</a
+              >
+              <a href="tel:+447427783539" class="mb-3"
+                ><i class="fab fa-whatsapp me-2"></i> +44 7427 783539</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright py-4">
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="col-md-6 text-center text-md-start mb-md-0">
+            <span class="text-body">
+              <a class="border-bottom" style="border-bottom: none !important">
+                <i class="fas fa-copyright text-light me-2"></i>
+                Well Clean
+              </a>
+              <span id="year"></span> All rights reserved.
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright End -->
+
+    <!-- Back to Top -->
+    <a class="btn btn-secondary btn-lg-square rounded-circle back-to-top"
+      ><i class="fa fa-arrow-up"></i
+    ></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const oneOffBtn = document.getElementById("oneOffBtn");
+        const regularBtn = document.getElementById("regularBtn");
+        const oneOffSection = document.getElementById("oneOffSection");
+        const regularSection = document.getElementById("regularSection");
+        const bookingModal = new bootstrap.Modal(
+          document.getElementById("bookingDetailsModal")
+        );
+
+        // Pricing data
+        const priceData = {
+          "one-off": {
+            "1-2": { min: 40, max: 60 },
+            "3-4": { min: 80, max: 120 },
+            "5+": { min: 120, max: 180 },
+          },
+          regular: {
+            weekly: 13.5,
+            monthly: 15,
+          },
+        };
+
+        // Update price display
+        function updatePrice() {
+          const serviceType =
+            oneOffSection.style.display === "block" ? "one-off" : "regular";
+          const roomSize =
+            serviceType === "one-off"
+              ? document.getElementById("oneOffRoomSize").value
+              : document.getElementById("regularRoomSize").value;
+          const frequency = document.getElementById("regularFrequency").value;
+
+          // Update service type
+          document.getElementById("serviceType").textContent =
+            serviceType === "one-off" ? "One-Off Clean" : "Regular Cleaning";
+
+          // Update house size
+          document.getElementById("houseSize").textContent = roomSize
+            ? `${roomSize} Rooms`
+            : "Select house size";
+
+          // Update frequency (only for regular)
+          if (serviceType === "regular") {
+            document.getElementById("frequencySection").style.display = "block";
+            document.getElementById("cleaningFrequency").textContent = frequency
+              ? frequency === "weekly"
+                ? "Weekly/Bi-Weekly"
+                : "Monthly"
+              : "Select frequency";
+          } else {
+            document.getElementById("frequencySection").style.display = "none";
+          }
+
+          // Calculate price
+          if (roomSize) {
+            if (serviceType === "one-off") {
+              const priceRange = priceData["one-off"][roomSize];
+              const price = (priceRange.min + priceRange.max) / 2;
+              document.getElementById(
+                "totalPrice"
+              ).textContent = `£${price.toFixed(2)}`;
+              document.getElementById(
+                "basePrice"
+              ).textContent = `£${price.toFixed(2)}`;
+              document.getElementById(
+                "priceRange"
+              ).textContent = `£${priceRange.min} - £${priceRange.max}`;
+
+              // Hide hourly rate and monthly rate sections
+              document.getElementById("hourlyRateSection").style.display =
+                "none";
+              document.getElementById("monthlyRateSection").style.display =
+                "none";
+            } else if (frequency) {
+              const rate = priceData["regular"][frequency];
+              document.getElementById(
+                "totalPrice"
+              ).textContent = `£${rate.toFixed(2)}`;
+              document.getElementById(
+                "hourlyRate"
+              ).textContent = `£${rate.toFixed(2)}`;
+              document.getElementById("priceRange").textContent =
+                frequency === "weekly"
+                  ? `£13.50hr (with cleaning supplies provided) - £14.50`
+                  : `£15 per hour`;
+
+              // Show hourly rate section, hide monthly rate
+              document.getElementById("hourlyRateSection").style.display =
+                "block";
+              document.getElementById("monthlyRateSection").style.display =
+                "none";
+            }
+          } else {
+            // Reset prices if no selection
+            document.getElementById("totalPrice").textContent = "£0.00";
+            document.getElementById("serviceType").textContent =
+              "Select a service type";
+            document.getElementById("houseSize").textContent =
+              "Select house size";
+            document.getElementById("cleaningFrequency").textContent =
+              "Select frequency";
+            document.getElementById("priceRange").textContent =
+              "Select options to see price range";
+            document.getElementById("basePrice").textContent = "£0.00";
+            document.getElementById("hourlyRate").textContent = "£0.00";
+            document.getElementById("monthlyRate").textContent = "£0.00";
+          }
+        }
+
+        // Button click handlers
+        oneOffBtn.addEventListener("click", function () {
+          oneOffSection.style.display = "block";
+          regularSection.style.display = "none";
+          oneOffBtn.classList.add("btn-primary");
+          oneOffBtn.classList.remove("btn-secondary");
+          regularBtn.classList.add("btn-secondary");
+          regularBtn.classList.remove("btn-primary");
+          updatePrice();
+        });
+
+        regularBtn.addEventListener("click", function () {
+          regularSection.style.display = "block";
+          oneOffSection.style.display = "none";
+          regularBtn.classList.add("btn-primary");
+          regularBtn.classList.remove("btn-secondary");
+          oneOffBtn.classList.add("btn-secondary");
+          oneOffBtn.classList.remove("btn-primary");
+          updatePrice();
+        });
+
+        // Form change handlers
+        document
+          .getElementById("oneOffRoomSize")
+          .addEventListener("change", updatePrice);
+        document
+          .getElementById("regularRoomSize")
+          .addEventListener("change", updatePrice);
+        document
+          .getElementById("regularFrequency")
+          .addEventListener("change", updatePrice);
+
+        // Get booking details from forms
+        function getBookingDetails() {
+          const serviceType =
+            oneOffSection.style.display === "block" ? "one-off" : "regular";
+          const roomSize =
+            serviceType === "one-off"
+              ? document.getElementById("oneOffRoomSize").value
+              : document.getElementById("regularRoomSize").value;
+
+          const date =
+            serviceType === "one-off"
+              ? document.getElementById("oneOffDate").value
+              : document.getElementById("regularDate").value;
+
+          const time =
+            serviceType === "one-off"
+              ? document.getElementById("oneOffTime").value
+              : document.getElementById("regularFrequency").value;
+
+          const notes =
+            serviceType === "one-off"
+              ? document.getElementById("oneOffNotes").value
+              : document.getElementById("regularNotes").value;
+
+          // Convert room size to human-readable format
+          const houseSize =
+            {
+              "1-2": "1-2 Rooms",
+              "3-4": "3-4 Rooms",
+              "5+": "5+ Rooms",
+            }[roomSize] || "Unknown";
+
+          return {
+            serviceType,
+            houseSize,
+            date,
+            time,
+            notes,
+          };
+        }
+
+        // Form submission handlers
+        document
+          .getElementById("oneOffForm")
+          .addEventListener("submit", function (e) {
+            e.preventDefault();
+            // console.log("One-Off Form Submitted");
+            const bookingDetails = getBookingDetails();
+            // console.log("Booking Details:", bookingDetails);
+            bookingModal.show();
+          });
+
+        document
+          .getElementById("regularForm")
+          .addEventListener("submit", function (e) {
+            e.preventDefault();
+            // console.log("Regular Form Submitted");
+            const bookingDetails = getBookingDetails();
+            // console.log("Booking Details:", bookingDetails);
+            bookingModal.show();
+          });
+
+        // Confirm booking handler
+        document
+          .getElementById("confirmBooking")
+          .addEventListener("click", function () {
+            // console.log("Confirm Booking Button Clicked");
+            // Get booking details
+            const bookingDetails = getBookingDetails();
+            // console.log("Booking Details:", bookingDetails);
+
+            // Get customer details
+            const customerDetails = {
+              fullName: document.getElementById("name")?.value || "",
+              email: document.getElementById("email")?.value || "",
+              phone: document.getElementById("phone")?.value || "",
+              alternatePhone:
+                document.getElementById("alternatePhone")?.value || "",
+              address: document.getElementById("address")?.value || "",
+              postcode: document.getElementById("postcode")?.value || "",
+              city: document.getElementById("city")?.value || "",
+              county: document.getElementById("county")?.value || "",
+              preferredTime:
+                document.getElementById("preferredTime")?.value || "",
+              additionalNotes:
+                document.getElementById("additionalNotes")?.value || "",
+            };
+
+            // console.log("Customer Details:", customerDetails);
+
+            // Combine all data
+            const bookingData = {
+              ...bookingDetails,
+              ...customerDetails,
+              timestamp: new Date().toLocaleString("en-GB", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+                hour: "2-digit",
+                minute: "2-digit",
+                hour12: true,
+              }),
+              status: "pending",
+            };
+
+            // Send booking data
+            const whatsappMessage = `
+              *New Booking Request*
+              
+              *Customer Details:*
+              Name: ${bookingData.fullName}
+              Email: ${bookingData.email}
+              Phone: ${bookingData.phone}
+              Alternate Phone: ${bookingData.alternatePhone}
+              
+              *Address:*
+              ${bookingData.address}
+              Postcode: ${bookingData.postcode}
+              City: ${bookingData.city}
+              County: ${bookingData.county}
+              
+              *Service Details:*
+              Service Type: ${bookingData.serviceType}
+              House Size: ${bookingData.houseSize}
+              ${
+                bookingData.serviceType === "Regular"
+                  ? `Frequency: ${bookingData.time}\n`
+                  : `Preferred Time: ${bookingData.time}\nPreferred Time: ${bookingData.preferredTime}\n`
+              }
+              
+              *Additional Notes:*
+              ${bookingData.additionalNotes}
+              
+              Status: ${bookingData.status}
+              Timestamp: ${bookingData.timestamp}
+            `;
+
+            // Open WhatsApp
+            const whatsappUrl = `https://wa.me/447398538498?text=${encodeURIComponent(
+              whatsappMessage
+            )}`;
+            window.open(whatsappUrl, "_blank");
+
+            // Close modals
+            const bookingDetailsModal = new bootstrap.Modal(
+              document.getElementById("bookingDetailsModal")
+            );
+            bookingDetailsModal.hide();
+
+            const termsModal = new bootstrap.Modal(
+              document.getElementById("termsModal")
+            );
+            termsModal.hide();
+
+            // Reset forms
+            document.getElementById("oneOffForm").reset();
+            document.getElementById("regularForm").reset();
+            document.getElementById("bookingDetailsForm").reset();
+
+            // Reset price display
+            document.getElementById("totalPrice").textContent = "£0.00";
+            document.getElementById("serviceType").textContent =
+              "Select a service type";
+            document.getElementById("houseSize").textContent =
+              "Select house size";
+            document.getElementById("cleaningFrequency").textContent =
+              "Select frequency";
+            document.getElementById("priceRange").textContent =
+              "Select options to see price range";
+            document.getElementById("basePrice").textContent = "£0.00";
+            document.getElementById("hourlyRate").textContent = "£0.00";
+            document.getElementById("monthlyRate").textContent = "£0.00";
+          });
+
+        // Initial update
+        updatePrice();
+      });
+    </script>
+  </body>
+</html>

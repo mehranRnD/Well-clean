@@ -1,6 +1,29 @@
+:root {
+  --bs-font-family: "Varela Round" !important;
+}
+
 body {
+  font-family: var(--bs-font-family) !important;
   color: rgb(23, 23, 23) !important;
 }
+
+p,
+span,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--bs-font-family);
+}
+
+/* icon size */
+.ic-size {
+  font-size: 4rem;
+}
+
 /*** Spinner Start ***/
 /*** Spinner ***/
 
@@ -100,22 +123,24 @@ body {
 .navbar-light .navbar-nav .nav-link {
   position: relative;
   margin-right: 25px;
-  padding: 35px 0;
+  padding: 20px 0;
   color: var(--bs-white);
   font-size: 17px;
   font-weight: 400;
   outline: none;
   transition: 0.5s;
+  border-bottom: none;
 }
 
 .sticky-top.navbar-light .navbar-nav .nav-link {
   padding: 20px 0;
   color: var(--bs-dark);
+  border-bottom: none;
 }
 
 .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active {
-  color: var(--bs-primary);
+  color: var(--bs-secondary);
 }
 
 .navbar-light .navbar-brand img {
@@ -153,6 +178,23 @@ body {
   .sticky-top.navbar-light {
     position: relative;
     background: var(--bs-white);
+  }
+
+  .mb-h {
+    font-size: 22px !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .mb-p {
+    font-size: 14px !important;
+  }
+
+  .mb-btn {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    font-size: 14px !important;
   }
 
   .navbar.navbar-expand-lg .navbar-toggler {
@@ -198,7 +240,7 @@ body {
     left: 0;
     border-top: 0;
     border-right: 0;
-    border-bottom: 1px solid;
+    border-bottom: 1px solid white;
     border-left: 0;
     border-style: dotted;
     z-index: 999;
@@ -217,7 +259,7 @@ body {
     height: 2px;
     bottom: -1px;
     left: 50%;
-    background: var(--bs-primary);
+    background: var(--bs-secondary);
     transition: 0.5s;
   }
 
@@ -232,7 +274,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     border: 10px solid;
-    border-color: transparent transparent var(--bs-primary) transparent;
+    border-color: transparent transparent var(--bs-secondary) transparent;
     opacity: 0;
     transition: 0.5s;
   }
@@ -277,7 +319,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--bs-primary);
+  background: var(--bs-secondary);
   transition: 0.5s;
 }
 
@@ -401,6 +443,18 @@ body {
   }
 }
 
+@media (max-width: 375px) {
+  .img-fluid {
+    display: none !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .img-fluid {
+    display: none !important;
+  }
+}
+
 .modal .modal-header {
   height: 100px;
 }
@@ -414,8 +468,7 @@ body {
 .bg-breadcrumb {
   position: relative;
   overflow: hidden;
-  background: 
-    url(../img/about-us.jpg);
+  background: url(../img/about-us2.jpg);
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -545,8 +598,6 @@ body {
   z-index: 1;
 }
 
-
-
 .service-item:hover .service-content,
 .service-item:hover .service-btn {
   position: relative;
@@ -625,7 +676,6 @@ body {
   background: #e4405f;
 } /* Instagram Pink */
 
-
 /* Style for modal input fields */
 .modal-content {
   border-radius: 10px;
@@ -689,11 +739,10 @@ input[type="file"] {
 }
 
 .about-img {
-  height: 60vh;
-  background-image: url(https://websitedemos.net/cleaning-agency-04/wp-content/uploads/sites/489/2020/01/image-02.jpg);
+  height: 90vh;
+  background-image: url(https://images.pexels.com/photos/4239113/pexels-photo-4239113.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
   background-position: center top;
   background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .why-us-page {
@@ -1122,3 +1171,271 @@ input[type="file"] {
   z-index: 0;
   background-size: cover;
 }
+
+.cleaning-services-section {
+        background-color: #f8f9fa;
+        padding: 80px 0;
+      }
+
+      .cleaning-service-tabs {
+        gap: 1rem;
+      }
+
+      .cleaning-service-tab {
+        background: white;
+        border: 2px solid #f1f1f1;
+        padding: 1rem 2rem;
+        border-radius: 50px;
+        color: #333;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+
+      .cleaning-service-tab:hover,
+      .cleaning-service-tab.active {
+        background: #fff;
+        border-color: #e1e1e1;
+        color: #000;
+        transform: translateY(-3px);
+      }
+
+      .cleaning-service-tab i {
+        font-size: 1.1rem;
+      }
+
+      .cleaning-service-card {
+        background: white;
+        border: 2px solid #f1f1f1;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+      }
+
+      .cleaning-service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .cleaning-service-card h3 {
+        color: #000;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+      }
+
+      .cleaning-service-card p {
+        color: #666;
+        line-height: 1.6;
+        font-size: 0.95rem;
+      }
+
+      .cleaning-service-features {
+        margin: 0;
+        padding: 0;
+      }
+
+      .cleaning-service-features li {
+        margin-bottom: 0.5rem;
+        color: #666;
+        font-size: 0.9rem;
+      }
+
+      .cleaning-service-features i {
+        font-size: 0.8rem;
+      }
+
+      .cleaning-service-card .btn {
+        padding: 0.8rem 1.5rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        margin-top: 1.5rem;
+      }
+
+      .cleaning-service-card .btn:hover {
+        transform: translateX(10px);
+      }
+
+      .cleaning-service-card .btn i {
+        transition: transform 0.3s ease;
+        font-size: 0.9rem;
+      }
+
+      .cleaning-service-card .btn:hover i {
+        transform: translateX(5px);
+      }
+
+      @media (max-width: 768px) {
+        .cleaning-service-tabs {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        .cleaning-service-tab {
+          padding: 0.8rem 1.5rem;
+          font-size: 0.9rem;
+        }
+
+        .cleaning-service-card {
+          padding: 2rem;
+        }
+
+        .cleaning-service-card h3 {
+          font-size: 1.2rem;
+        }
+      }
+
+      /* Remove content switch animation */
+      .cleaning-service-content {
+        display: none;
+      }
+
+      .cleaning-service-content.active {
+        display: block;
+      }
+
+      .avail-body {
+        font-family: "Segoe UI", sans-serif;
+        background: #f9f9f9;
+        padding: 40px 20px;
+        margin: 0;
+        text-align: center;
+      }
+
+      .avail-heading {
+        font-size: 2.2rem;
+        color: #2c3e50;
+        margin-bottom: 30px;
+        animation: availFadeInDown 1s ease forwards;
+      }
+
+      .avail-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        opacity: 0;
+        transform: translateY(30px);
+        animation: availFadeUp 1s ease forwards;
+        animation-delay: 0.5s;
+        padding: 0 10px;
+      }
+
+      .avail-card {
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        padding: 20px;
+        flex: 1 1 100%;
+        width: 100%;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        animation: availFadeCard 0.6s ease forwards;
+        opacity: 0;
+      }
+
+      .avail-card:hover {
+        transform: translateY(-8px) scale(1.03);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      }
+
+      .avail-day {
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: #2c3e50;
+        margin-bottom: 8px;
+      }
+
+      .avail-time {
+        font-size: 1.05rem;
+        color: #555;
+      }
+
+      .avail-card.today {
+        background-color: #E9EFF3;
+        border-left: 6px solid #19409A;
+        box-shadow: 0 8px 20px rgba(25, 64, 154, 0.2);
+      }
+
+      @keyframes availSlideLeft {
+        from {
+          opacity: 0;
+          transform: translateX(-40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes availSlideRight {
+        from {
+          opacity: 0;
+          transform: translateX(40px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      .avail-card.slide-left {
+        animation: availSlideLeft 0.6s ease forwards;
+      }
+
+      .avail-card.slide-right {
+        animation: availSlideRight 0.6s ease forwards;
+      }
+
+      @keyframes availFadeUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes availFadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes availFadeCard {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* ✅ Mobile: Full width cards with some spacing */
+      @media (max-width: 600px) {
+        .avail-container {
+          padding: 0 10px;
+        }
+
+        .avail-card {
+          width: 100%;
+          max-width: 100%;
+          flex: 1 1 100%;
+        }
+      }
+
+      /* ✅ Tablets: 2 cards per row */
+      @media (min-width: 601px) and (max-width: 1024px) {
+        .avail-card {
+          flex: 1 1 calc(50% - 20px);
+          max-width: calc(50% - 20px);
+        }
+      }
+
+      /* ✅ Desktop: 3-4 cards per row */
+      @media (min-width: 1025px) {
+        .avail-card {
+          flex: 1 1 calc(25% - 20px);
+          max-width: calc(25% - 20px);
+        }
+      }
